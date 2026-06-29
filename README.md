@@ -157,7 +157,7 @@ To install Postman, go to your terminal and type the following command:<br/>
 <br/>
  
 
-<h3>Install mitmproxy2swagger</h3><b/>
+<h3>Install mitmproxy2swagger</h3><br/>
 `$ git clone https://github.com/alufers/mitmproxy2swagger.git` <br/>
 `$ cd mitmproxy2swagger` <br/>
 `$ sudo docker build -t mitmproxy2swagger.` <br/>
