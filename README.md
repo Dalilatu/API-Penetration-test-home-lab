@@ -129,4 +129,135 @@ Once this is done, go to `settings` in your browser and search for "Certificate"
 <br />
 <br />
 
-Once this is done, you can test the if it works by intercepting the traffic. If the request appears on Burpsuite History tab, then the configuration was successful.
+Once this is done, you can test the if it works by intercepting the traffic. If the request appears on Burpsuite History tab, then the configuration was successful.<br/>
+
+<br/>
+We will also have to add another proxy listening to Postman with Port 5555<br/><br/>
+
+<b>Step 5: Installing Postman</b><br/>
+
+
+To install Postman, go to your terminal and type the following command:<br/>
+<br/>
+<h3>Install Postman</h3><br/>
+`$ sudo wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz && sudo tar -xvzf postman-linux-x64.tar.gz -C /opt && sudo ln -s /opt/Postman/Postman /usr/bin/postman`<br/>
+
+<br/>
+<h3>Install Git</h3>h3></h3><br/>
+`$ sudo apt-get install git`<br/>
+<br/>
+
+ 
+
+<h>Install Docker</h3> <br/>
+
+`$ sudo apt install docker.io -y` <br/>
+
+`$ sudo apt-get install docker.io docker-compose` <br/>
+<br/>
+ 
+
+<h3>Install mitmproxy2swagger</h3><b/>
+`$ git clone https://github.com/alufers/mitmproxy2swagger.git` <br/>
+`$ cd mitmproxy2swagger` <br/>
+`$ sudo docker build -t mitmproxy2swagger.` <br/>
+ <br/>
+
+<h3>Install Go</h3><br/>
+`$ sudo apt install golang-go` <br/>
+<br/>
+ 
+
+<h3>The JSON Web Token Toolkit v2</h3>
+`$ cd /opt` <br/>
+
+`$ sudo git clone https://github.com/ticarpi/jwt_tool` <br/>
+
+`$ cd jwt_tool` <br/>
+
+`$ python3 -m pip install -r requirements.txt --break-system-packages` <br/>
+
+
+<h3>(Optional) Make an alias for jwt_tool.py</h3>
+
+`$ sudo chmod +x jwt_tool.py`<br/>
+
+`$ sudo ln -s /opt/jwt_tool/jwt_tool.py /usr/bin/jwt_tool`<br/>
+<br/>
+ 
+
+<h3>Install Sublime Text</h3><br/>
+<h3>Install the GPG key:</h3><br/>
+
+`$ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null`<br/>
+
+<h3>Select the Stable channel:</h3>
+
+`$echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list`<br/>
+
+<h3>Update apt sources and install Sublime Text:</h3><br/>
+
+`$sudo apt-get update`<br/>
+
+`$sudo apt-get install sublime-text`<br/>
+<br/>
+
+ 
+
+<h3>Install Kiterunner</h3><br/>
+`$ sudo git clone  https://github.com/assetnote/kiterunner.git`<br/>
+
+`$ cd kiterunner`<br/>
+
+`$ sudo make build`<br/>
+
+`$ sudo ln -s /opt/kiterunner/dist/kr /usr/bin/kr`<br/>
+<br/>
+
+ 
+
+<h3>Install Arjun</h3><br/>
+`$ sudo git clone https://github.com/s0md3v/Arjun.git`<br/>
+
+Recommended way to install arjun:
+
+`$ cd Arjun`<br/>
+
+`$ pip3 install arjun`<br/>
+
+For new kali versions, you can use this method as this error message can appear.<br/>
+
+<p align="center">
+  Error message:<br/>
+<img alt="image" src="https://github.com/user-attachments/assets/0921037b-0411-48c0-be30-6d7f1e63afc4" height="80%" width="80%"/>
+<br />
+<br />
+
+Use this method to complete the installation of Arjun.<br/>
+`sudo apt update`<br/>
+`sudo apt install pipx`<br/>
+`pipx install arjun`<br/>
+<br/>
+
+ <h3>Install OWASP ZAP</h3><br/>
+`$ sudo apt install zaproxy`<br/>
+
+[Link to download Zaproxy](https://www.kali.org/tools/zaproxy/)<br/>
+
+Once ZAP is installed, make sure to navigate to the Manage Add-Ons (CTRL+U). Make sure to apply updates for the Fuzzer and OpenAPI Support.<br/>
+<br/>
+
+ 
+
+<h3>Useful Wordlists</h3><br/>
+[SecLists](https://github.com/danielmiessler/SecLists)<br/>
+
+`$ sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \
+&& sudo unzip SecList.zip \
+&& sudo rm -f SecList.zip`<br/><br/>
+
+<h3>Hacking-APIs (https://github.com/hAPI-hacker/Hacking-APIs)</h3><br/>
+
+`$ sudo wget -c https://github.com/hAPI-hacker/Hacking-APIs/archive/refs/heads/main.zip -O HackingAPIs.zip \
+&& sudo unzip HackingAPIs.zip \
+&& sudo rm -f HackingAPIs.zip`
